@@ -1,0 +1,61 @@
+ body {
+font-family: Arial, sans-serif;
+text-align: center;
+background-color: #b099d4;
+margin: 0;
+padding: 20px;
+}
+.game-container {
+max-width: 600px;
+margin: 0 auto;
+}
+h1 {
+color: #39037c;
+}
+.score-timer {
+display: flex;
+justify-content: space-around;
+margin-bottom: 20px;
+font-size: 1.2em;
+}
+#game-board {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+margin-bottom: 20px;
+justify-content: center;
+}
+.hole {
+width: 100px;
+height: 100px;
+background-color: #a200ff; /* коричневый — земля */
+border-radius: 50%;
+position: relative;
+overflow: hidden;
+cursor: url(''), pointer;
+}
+.mole {
+width: 80px;
+height: 80px;
+background-image: url('1.jpg');
+background-size: cover;
+position: absolute;
+bottom: -80px; /* изначально крот под землёй */
+left: 10px;
+transition: bottom 0.3s;
+}
+.mole.visible {
+bottom: 0; /* крот появляется */
+}
+#start-btn {
+padding: 10px 20px;
+font-size: 1em;
+background-color: #934caf;
+color: rgb(199, 129, 202);
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+#start-btn:hover {
+background-color: #c800ff;
+}
